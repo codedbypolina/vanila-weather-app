@@ -42,3 +42,11 @@ li {
   margin: 0;
   padding: 0;
 }
+
+input {
+  background-color: #b7b7a4;
+  border: solid 1px #b7b7a4;
+  border-radius: 15px;
+  padding: 8px;
+  color: white;
+}
