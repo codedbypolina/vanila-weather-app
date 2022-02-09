@@ -13,16 +13,24 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
+    <!--SEARCH ENGINE-->
     <div class="container">
       <div class="weather-app">
         <input type="text" placeholder="Type a city..." />
         <input type="button" value="Current Location" />
-        <input type="button" value="°C" />
-        <input type="button" value="°F" />
+        <!--<input type="button" value="°C" />
+        <input type="button" value="°F" /> -->
         <input type="button" value="Search" />
         <div class="row" id="row-1">
           <div class="col-md-3" id="temperature">
-            <h1>-1°C</h1>
+            <!--FORECAST OF THE DAY-->
+            <h1>
+              <span class="temperature">-1</span>
+              <span class="units">
+                <span class="celsius">°C </span> |
+                <span class="fahrenheit"> °F</span>
+              </span>
+            </h1>
           </div>
           <div class="col-md-5">
             <ul>
@@ -33,6 +41,8 @@
           </div>
         </div>
       </div>
+
+      <!--CREDITS-->
       <p>
         This project was coded by
         <a href="https://www.linkedin.com/in/polinashliakhina/" target="_blank"

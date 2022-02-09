@@ -5,6 +5,8 @@ body {
     sans-serif;
 }
 
+/* Box Container */
+
 .weather-app {
   max-width: 900px;
   margin: 0 auto;
@@ -15,16 +17,38 @@ body {
   border-radius: 8px;
 }
 
-p {
-  text-align: center;
+/* Search Engine */
+
+input {
+  background-color: #b7b7a4;
+  border: solid 1px #b7b7a4;
+  border-radius: 15px;
+  padding: 8px;
+  color: white;
 }
+
+#temperature {
+  padding-top: 20px;
+}
+
+/* Forecast of the day */
 
 h1 {
   text-align: center;
 }
 
-#temperature {
-  padding-top: 20px;
+.temperature {
+  font-size: 70px;
+}
+
+.units {
+  font-size: 20px;
+  position: relative;
+  top: -35px;
+}
+
+.fahrenheit {
+  font-weight: normal;
 }
 
 #city {
@@ -34,6 +58,7 @@ h1 {
 
 ul {
   margin: 0;
+  margin-top: 15px;
   padding: 0;
 }
 
@@ -43,10 +68,9 @@ li {
   padding: 0;
 }
 
-input {
-  background-color: #b7b7a4;
-  border: solid 1px #b7b7a4;
-  border-radius: 15px;
-  padding: 8px;
-  color: white;
+/* Credits */
+
+p {
+  text-align: center;
+  margin-top: 15px;
 }
