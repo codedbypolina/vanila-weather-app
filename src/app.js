@@ -35,7 +35,7 @@ function displayTemperature(response) {
 }
 
 let apiKey = "01e2a719a4f5c5a36214df788b170932";
-let cityName = "Orlando";
+let cityName = "Bishkek";
 let unit = "metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${unit}`;
 

@@ -78,3 +78,14 @@ p {
   text-align: center;
   margin-top: 15px;
 }
+
+p a {
+  color: #6b705c;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+p a:hover {
+  color: #6b705c;
+  text-decoration: underline;
+}
