@@ -68,6 +68,10 @@ li {
   padding: 0;
 }
 
+#description {
+  text-transform: capitalize;
+}
+
 /* Credits */
 
 p {
