@@ -10,6 +10,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
@@ -18,14 +19,12 @@
       <div class="weather-app">
         <input type="text" placeholder="Type a city..." />
         <input type="button" value="Current Location" />
-        <!--<input type="button" value="°C" />
-        <input type="button" value="°F" /> -->
         <input type="button" value="Search" />
         <div class="row" id="row-1">
           <div class="col-md-3" id="temperature">
             <!--FORECAST OF THE DAY-->
             <h1>
-              <span class="temperature">-1</span>
+              <span id="currentTemperature">-1</span>
               <span class="units">
                 <span class="celsius">°C </span> |
                 <span class="fahrenheit"> °F</span>
@@ -35,8 +34,11 @@
           <div class="col-md-5">
             <ul>
               <li id="city">Bishkek</li>
-              <li>Saturday 22:15, clear sky</li>
-              <li>Humidity: 59%, Wind: 0.94km/h</li>
+              <li>Saturday 22:15, <span id="description">clear sky</span></li>
+              <li>
+                Humidity: <span id="humidity">59</span>%, Wind:
+                <span id="windSpeed">0.94</span>km/h
+              </li>
             </ul>
           </div>
         </div>
