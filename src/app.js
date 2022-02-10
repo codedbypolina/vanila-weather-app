@@ -1,3 +1,5 @@
+/* Format the date */
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -17,6 +19,8 @@ function formatDate(timestamp) {
   return `${currentDay} at ${hours}:${minutes}`;
 }
 
+/* Forecast of the day with API integration*/
+
 function displayTemperature(response) {
   console.log(response.data);
   let city = document.querySelector("#city");
@@ -33,6 +37,8 @@ function displayTemperature(response) {
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   currentDate.innerHTML = formatDate(response.data.dt * 1000);
 }
+
+/* Search engine */
 
 function search(city) {
   let apiKey = "01e2a719a4f5c5a36214df788b170932";
