@@ -34,9 +34,21 @@ function displayTemperature(response) {
   currentDate.innerHTML = formatDate(response.data.dt * 1000);
 }
 
-let apiKey = "01e2a719a4f5c5a36214df788b170932";
-let cityName = "Bishkek";
-let unit = "metric";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${unit}`;
+function search(city) {
+  let apiKey = "01e2a719a4f5c5a36214df788b170932";
+  let cityName = city;
+  let unit = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSearchInput(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#searchInput");
+  search(cityInput.value);
+}
+
+search("Bishkek");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSearchInput);
