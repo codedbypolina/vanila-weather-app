@@ -17,13 +17,32 @@
     <!--SEARCH ENGINE-->
     <div class="container">
       <div class="weather-app">
-        <input type="text" placeholder="Type a city..." />
-        <!-- 
+        <form id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="text"
+                placeholder="Type a city..."
+                id="searchInput"
+                autocomplete="off"
+              />
+            </div>
+            <!-- 
         <input type="button" value="°C" id="celsius" />
         <input type="button" value="°F" id="fahrenheit" />
         -->
-        <input type="button" value="Current Location" />
-        <input type="button" value="Search" />
+            <div class="col-3">
+              <input
+                type="button"
+                value="Current Location"
+                class="currentLocation"
+              />
+            </div>
+            <div class="col-3">
+              <input type="button" value="Search" class="currentLocation" />
+            </div>
+          </div>
+        </form>
         <div class="row" id="row-1">
           <div class="col-md-3" id="temperature">
             <!--FORECAST OF THE DAY-->

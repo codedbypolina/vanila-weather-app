@@ -27,8 +27,25 @@ input {
   color: white;
 }
 
+#searchInput {
+  width: 400px;
+}
+
+.currentLocation {
+  width: 150px;
+  transition: all 200ms ease-in;
+}
+
+.col-3 {
+  width: 160px;
+}
+
 #temperature {
   padding-top: 20px;
+}
+
+.currentLocation:hover {
+  background-color: #6b705c;
 }
 
 /* Forecast of the day */
