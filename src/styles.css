@@ -37,8 +37,20 @@ input {
 }
 
 .col-3 {
-  width: 160px;
+  width: 150px;
+  margin-right: 20px;
 }
+
+/* 
+.col-1 {
+  width: 36px;
+  padding: 0px;
+}
+
+.degree {
+  border-radius: 3px;
+}
+*/
 
 #temperature {
   padding-top: 20px;
@@ -64,8 +76,27 @@ h1 {
   top: -35px;
 }
 
-.fahrenheit {
+.inactive {
   font-weight: normal;
+  color: #b7b7a4;
+  text-decoration: none;
+}
+
+.inactive:hover {
+  text-decoration: underline;
+  color: #b7b7a4;
+}
+
+.active {
+  text-decoration: none;
+  font-weight: 900;
+  color: #6b705c;
+  cursor: default;
+}
+
+.active:hover {
+  color: #6b705c;
+  text-decoration: none;
 }
 
 #city {

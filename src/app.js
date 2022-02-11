@@ -30,8 +30,10 @@ function displayTemperature(response) {
   let windSpeed = document.querySelector("#windSpeed");
   let currentDate = document.querySelector("#date");
 
+  celsiusTemperature = response.data.main.temp;
+
   city.innerHTML = response.data.name;
-  currentTemperature.innerHTML = Math.round(response.data.main.temp);
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = Math.round(response.data.main.humidity);
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
@@ -54,7 +56,38 @@ function handleSearchInput(event) {
   search(cityInput.value);
 }
 
-search("Bishkek");
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSearchInput);
+
+/* Fahrenheit Conversion */
+
+let celsiusTemperature = null;
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  celsiusLink.classList.add("inactive");
+  fahrenheitLink.classList.add("active");
+  fahrenheitLink.classList.remove("inactive");
+  let fahrenheitConverter = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement = document.querySelector("#currentTemperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitConverter);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  celsiusLink.classList.remove("inactive");
+  fahrenheitLink.classList.remove("active");
+  fahrenheitLink.classList.add("inactive");
+  temperatureElement = document.querySelector("#currentTemperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", convertToCelsius);
+
+search("Bishkek");
