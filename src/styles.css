@@ -1,3 +1,5 @@
+/*** GENERAL STYLING ***/
+
 body {
   color: #6b705c;
   background-color: #b7b7a4;
@@ -5,7 +7,7 @@ body {
     sans-serif;
 }
 
-/* Box Container */
+/*** BOX CONTAINER ***/
 
 .weather-app {
   max-width: 900px;
@@ -17,7 +19,7 @@ body {
   border-radius: 8px;
 }
 
-/* Search Engine */
+/*** SEARCH ENGINE ***/
 
 input {
   background-color: #b7b7a4;
@@ -60,7 +62,9 @@ input {
   background-color: #6b705c;
 }
 
-/* Forecast of the day */
+/*** FORECAST OF THE DAY ***/
+
+/* Temperature */
 
 h1 {
   text-align: center;
@@ -69,6 +73,8 @@ h1 {
 #currentTemperature {
   font-size: 70px;
 }
+
+/* Units */
 
 .units {
   font-size: 20px;
@@ -99,6 +105,8 @@ h1 {
   text-decoration: none;
 }
 
+/* City and detailed description of the day */
+
 #city {
   font-size: 30px;
   font-weight: bold;
@@ -120,7 +128,7 @@ li {
   text-transform: capitalize;
 }
 
-/* Credits */
+/*** CREDITS ***/
 
 p {
   text-align: center;

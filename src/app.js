@@ -65,6 +65,7 @@ let celsiusTemperature = null;
 
 function convertToFahrenheit(event) {
   event.preventDefault();
+  //Change css styling of degrees when they are active/inactive
   celsiusLink.classList.remove("active");
   celsiusLink.classList.add("inactive");
   fahrenheitLink.classList.add("active");
@@ -77,8 +78,11 @@ function convertToFahrenheit(event) {
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
+/* Celsius Conversion */
+
 function convertToCelsius(event) {
   event.preventDefault();
+  //Change css styling of degrees when they are active/inactive
   celsiusLink.classList.add("active");
   celsiusLink.classList.remove("inactive");
   fahrenheitLink.classList.remove("active");
