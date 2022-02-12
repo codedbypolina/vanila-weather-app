@@ -38,6 +38,64 @@ function displayTemperature(response) {
   humidity.innerHTML = Math.round(response.data.main.humidity);
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   currentDate.innerHTML = formatDate(response.data.dt * 1000);
+
+  /* Display Icon */
+
+  let images = [
+    /* Day */
+
+    "icons/Sun.svg" /* Clear Sky */,
+    "icons/cloud_sun.svg" /* Cloudy + Sun */,
+    "icons/cloud.svg" /* Cloudy */,
+    "icons/snow.svg" /* Snow */,
+    "icons/rain.svg" /* Rain */,
+    "icons/day_storm.svg" /* Day Storm */,
+
+    /* Night */
+    "icons/moon.svg" /* Clear Sky */,
+    "icons/night_cloud.svg" /* Cloudy + Moon */,
+    "icons/night_rainy.svg" /* Rain */,
+    "icons/storm.svg" /* Night Storm */,
+  ];
+
+  console.log(images);
+
+  /* Day Icons */
+
+  let weatherIcon = response.data.weather[0].icon;
+  if (weatherIcon === "01d") {
+    document.getElementById("img").src = images[0]; /* Clear Sky */
+  } else if (
+    weatherIcon === "02d" ||
+    weatherIcon === "03d" ||
+    weatherIcon === "04d"
+  ) {
+    document.getElementById("img").src = images[1]; /* Cloudy + Sun */
+  } else if (weatherIcon === "13d") {
+    document.getElementById("img").src = images[3]; /* Snow */
+  } else if (weatherIcon === "09d" || weatherIcon === "10d") {
+    document.getElementById("img").src = images[4]; /* Rain */
+  } else if (weatherIcon === "11d") {
+    document.getElementById("img").src = images[5];
+  }
+
+  /* Night Icons */
+
+  if (weatherIcon === "01n") {
+    document.getElementById("img").src = images[6]; /* Clear Sky */
+  } else if (
+    weatherIcon === "02n" ||
+    weatherIcon === "03n" ||
+    weatherIcon === "04n"
+  ) {
+    document.getElementById("img").src = images[7]; /* Cloudy + Moon */
+  } else if (weatherIcon === "13n") {
+    document.getElementById("img").src = images[3]; /* Snow */
+  } else if (weatherIcon === "09n" || weatherIcon === "10n") {
+    document.getElementById("img").src = images[8]; /* Rain */
+  } else if (weatherIcon === "11n") {
+    document.getElementById("img").src = images[9];
+  }
 }
 
 /* Search engine */

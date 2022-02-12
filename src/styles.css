@@ -48,6 +48,7 @@ input {
 
 .currentLocation:hover {
   background-color: #023047;
+  border: solid 1px #023047;
 }
 
 .col-3 {
