@@ -28,12 +28,18 @@ body {
   color: white;
 }
 
-input {
+input,
+#location {
   background-color: #8ecae6;
   border: solid 1px #8ecae6;
   border-radius: 15px;
   padding: 10px 8px;
   color: white;
+}
+
+#location {
+  height: 50px;
+  width: auto;
 }
 
 #searchInput {
