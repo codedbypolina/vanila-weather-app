@@ -28,18 +28,12 @@ body {
   color: white;
 }
 
-input,
-#location {
+input {
   background-color: #8ecae6;
   border: solid 1px #8ecae6;
   border-radius: 15px;
   padding: 10px 8px;
   color: white;
-}
-
-#location {
-  height: 50px;
-  width: auto;
 }
 
 #searchInput {
@@ -149,6 +143,25 @@ li {
 
 #description {
   text-transform: capitalize;
+}
+
+/*** FORECAST ***/
+.week-weather-forecast {
+  text-align: center;
+  color: white;
+  margin-top: 25px;
+}
+
+.weather-forecast-frame {
+  background-color: #023047;
+  border-radius: 15px;
+  height: 180px;
+  padding-top: 20px;
+}
+
+.weather-forecast-icon {
+  padding: 15px 0px;
+  width: 60px;
 }
 
 /*** CREDITS ***/
