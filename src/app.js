@@ -153,3 +153,33 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 search("Bishkek");
+displayForecast();
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2">
+              <div class="weather-forecast-frame">
+                <div class="weather-forecast-day">${day}</div>
+                <img
+                  src="icons/weather-forecast-icons/white_sun.svg"
+                  alt=""
+                  width="40px"
+                  class="weather-forecast-icon"
+                />
+                <div class="weather-forecast-temperature">
+                  <span class="forecast-max-temperature"> -2° /</span>
+                  <span class="forecast-max-temperature"> -5°</span>
+                </div>
+              </div>
+            </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
