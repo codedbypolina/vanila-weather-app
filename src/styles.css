@@ -49,11 +49,32 @@ input {
 .currentLocation:hover {
   background-color: #023047;
   border: solid 1px #023047;
+  cursor: pointer;
 }
 
+#search-form .col-3 {
+  padding-left: 8px;
+}
+
+/*
 .col-3 {
   width: 150px;
   margin-right: 20px;
+}
+*/
+
+#location-button {
+  width: 46px;
+  background-color: #8ecae6;
+  border-radius: 15px;
+  transition: all 200ms ease-in;
+  border: solid 1px #8ecae6;
+  padding: 10px;
+}
+
+#location-button:hover {
+  background-color: #023047;
+  border: solid 1px #023047;
 }
 
 /* 
