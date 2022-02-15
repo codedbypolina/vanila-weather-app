@@ -155,6 +155,8 @@ celsiusLink.addEventListener("click", convertToCelsius);
 search("Bishkek");
 displayForecast();
 
+/* Display Forecast */
+
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;

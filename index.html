@@ -27,32 +27,33 @@
     <!--SEARCH ENGINE-->
     <div class="container">
       <div class="weather-app">
-        <form id="search-form">
-          <div class="row">
-            <div class="col-6">
-              <input
-                type="text"
-                placeholder="Type a city..."
-                id="searchInput"
-                autocomplete="off"
-              />
-            </div>
+        <!--TOP OF THE CONTAINER-->
+        <section class="top">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="text"
+                  placeholder="Type a city..."
+                  id="searchInput"
+                  autocomplete="off"
+                />
+              </div>
 
-            <div class="col-1 locationButton">
-              <img
-                src="icons/location.svg"
-                alt="Location Icon"
-                id="location-button"
-              />
-              <!--
+              <div class="col-1 locationButton">
+                <img
+                  src="icons/location.svg"
+                  alt="Location Icon"
+                  id="location-button"
+                />
+                <!--
               <input
                 type="button"
                 value="Current Location"
                 class="currentLocation"
               />
-              -->
-            </div>
-            <!--
+              --></div>
+              <!--
             <div class="col-1">
               <input type="button" value="°C" class="degree" id="celsius" />
             </div>
@@ -60,48 +61,57 @@
               <input type="button" value="°F" class="degree" id="fahrenheit" />
             </div>
             -->
-            <div class="col-3">
-              <input type="button" value="Search" class="currentLocation" />
+              <div class="col-3">
+                <input type="button" value="Search" class="currentLocation" />
+              </div>
+            </div>
+          </form>
+          <div class="row" id="row-1">
+            <div class="col-md-3">
+              <img src="icons/Sun.svg" alt="Sun Icon" class="icon" id="img" />
+            </div>
+            <div class="col-md-3" id="temperature">
+              <!--FORECAST OF THE DAY-->
+              <h1>
+                <span id="currentTemperature">-1</span>
+                <span class="units">
+                  <span>
+                    <a href="#" id="celsius" class="active" class="inactive"
+                      >°C
+                    </a></span
+                  >
+                  |
+                  <span>
+                    <a href="#" id="fahrenheit" class="inactive">°F </a>
+                  </span>
+                </span>
+              </h1>
+            </div>
+            <div class="col-md-5">
+              <ul>
+                <li id="city">Bishkek</li>
+                <li id="small">
+                  Last updated on
+                  <span id="date">Saturday 22:15</span>
+                </li>
+                <li><span id="description">clear sky</span></li>
+                <li>
+                  Humidity: <span id="humidity">59</span>%, Wind:
+                  <span id="windSpeed">0.94</span>km/h
+                </li>
+              </ul>
             </div>
           </div>
-        </form>
-        <div class="row" id="row-1">
-          <div class="col-md-3">
-            <img src="icons/Sun.svg" alt="Sun Icon" class="icon" id="img" />
+        </section>
+        <section class="wave">
+          <img src="icons/wave-shape.svg" alt="" id="wave1" />
+        </section>
+        <!--BOTTOM OF THE CONTAINER-->
+        <section class="bottom">
+          <div id="wave">
+            <div class="week-weather-forecast" id="forecast"></div>
           </div>
-          <div class="col-md-3" id="temperature">
-            <!--FORECAST OF THE DAY-->
-            <h1>
-              <span id="currentTemperature">-1</span>
-              <span class="units">
-                <span>
-                  <a href="#" id="celsius" class="active" class="inactive"
-                    >°C
-                  </a></span
-                >
-                |
-                <span>
-                  <a href="#" id="fahrenheit" class="inactive">°F </a>
-                </span>
-              </span>
-            </h1>
-          </div>
-          <div class="col-md-5">
-            <ul>
-              <li id="city">Bishkek</li>
-              <li id="small">
-                Last updated on
-                <span id="date">Saturday 22:15</span>
-              </li>
-              <li><span id="description">clear sky</span></li>
-              <li>
-                Humidity: <span id="humidity">59</span>%, Wind:
-                <span id="windSpeed">0.94</span>km/h
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="week-weather-forecast" id="forecast"></div>
+        </section>
       </div>
 
       <!--CREDITS-->
