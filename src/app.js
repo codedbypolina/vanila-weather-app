@@ -58,8 +58,6 @@ function displayTemperature(response) {
     "icons/storm.svg" /* Night Storm */,
   ];
 
-  console.log(images);
-
   /* Day Icons */
 
   let weatherIcon = response.data.weather[0].icon;
@@ -96,6 +94,15 @@ function displayTemperature(response) {
   } else if (weatherIcon === "11n") {
     document.getElementById("img").src = images[9];
   }
+
+  getForecast(response.data.coord);
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "01e2a719a4f5c5a36214df788b170932";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 /* Search engine */
@@ -152,12 +159,10 @@ function convertToCelsius(event) {
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-search("Bishkek");
-displayForecast();
-
 /* Display Forecast */
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -185,3 +190,5 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
+search("Bishkek");
