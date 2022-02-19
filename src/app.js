@@ -187,10 +187,13 @@ function displayForecast(response) {
                   forecastDay.dt
                 )}</div>
                 <img
-                  src="icons/weather-forecast-icons/white_sun.svg"
+                  src="icons/weather-forecast-icons/${
+                    forecastDay.weather[0].icon
+                  }.svg"
                   alt=""
                   width="40px"
                   class="weather-forecast-icon"
+                  id="forecast"
                 />
                 <div class="weather-forecast-temperature">
                   <span class="forecast-max-temperature"> ${Math.round(
