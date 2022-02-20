@@ -154,6 +154,7 @@ function convertToFahrenheit(event) {
   fahrenheitLink.classList.add("active");
   fahrenheitLink.classList.remove("inactive");
   let fahrenheitConverter = (celsiusTemperature * 9) / 5 + 32;
+
   temperatureElement = document.querySelector("#currentTemperature");
   temperatureElement.innerHTML = Math.round(fahrenheitConverter);
 }
