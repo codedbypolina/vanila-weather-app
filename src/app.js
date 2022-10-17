@@ -141,6 +141,7 @@ function handleSearchInput(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSearchInput);
+form.addEventListener("click", handleSearchInput);
 
 /* Fahrenheit Conversion */
 
